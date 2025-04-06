@@ -3,12 +3,12 @@ import{a as m,S as y,i as n}from"./assets/vendor-Db2TdIkw.js";(function(){const 
       <div class="photo-card">
         <img src="${o}" alt="${e}" loading="lazy" />
         <div class="info">
-          <p class="info-text"><b>Likes</b> ${t}</p>
-          <p class="info-text"><b>Views</b> ${a}</p>
-          <p class="info-text"><b>Comments</b> ${f}</p>
-          <p class="info-text"><b>Downloads</b> ${p}</p>
+          <p><b>Likes</b> ${t}</p>
+          <p><b>Views</b> ${a}</p>
+          <p><b>Comments</b> ${f}</p>
+          <p><b>Downloads</b> ${p}</p>
         </div>
       </div>
     </a>
-  `).join("");l.insertAdjacentHTML("beforeend",r),L.refresh()}function w(){l.innerHTML=""}function S(){u.classList.add("visible")}function c(){u.classList.remove("visible")}const d=document.querySelector(".form"),x=d.querySelector('input[name="search-text"]');d.addEventListener("submit",async s=>{s.preventDefault();const r=x.value.trim();if(!r){n.warning({title:"Oops!",message:"Please enter a search term!"});return}w(),S();try{const o=await b(r);if(c(),o.hits.length===0){n.info({title:"No results",message:"Sorry, there are no images matching your search query. Please try again!"});return}v(o.hits)}catch(o){c(),n.error({title:"Error",message:"Something went wrong. Try again later."}),console.error(o)}});
+  `).join("");l.insertAdjacentHTML("beforeend",r),L.refresh()}function w(){l.innerHTML=""}function S(){u.classList.add("visible")}function c(){u.classList.remove("visible")}const d=document.querySelector(".form"),q=d.querySelector('input[name="search-text"]');d.addEventListener("submit",async s=>{s.preventDefault();const r=q.value.trim();if(!r){n.warning({title:"Oops!",message:"Please enter a search term!"});return}w(),S();try{const o=await b(r);if(c(),o.hits.length===0){n.info({title:"No results",message:"Sorry, there are no images matching your search query. Please try again!"});return}v(o.hits)}catch(o){c(),n.error({title:"Error",message:"Something went wrong. Try again later."}),console.error(o)}});
 //# sourceMappingURL=index.js.map
